@@ -14,9 +14,6 @@ jobs:
         runs-on: ubuntu-latest
         if: ${{ github.event.repository.fork }}
 
-env:
-  force_javascript_actions_to_node24: true
-  
         steps:
             - name: Checkout target repo
               uses: actions/checkout@v4
