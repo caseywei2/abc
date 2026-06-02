@@ -3,7 +3,7 @@ name: Fork Sync
 permissions:
     contents: write
 
-on:
+于:
     schedule:
         - cron: "0 0 * * *"  # 每天午夜执行
     workflow_dispatch:  # 允许手动触发
@@ -34,7 +34,7 @@ jobs:
               run: echo "Sync completed successfully"
 
             - name: Check for Failure
-              if: 失败()
+              if: failure()
               run: |
                   echo "[Error] Sync failed. This might be due to:"
                   echo "1. Changes in the upstream workflow file"
